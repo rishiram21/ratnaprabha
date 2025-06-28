@@ -6,6 +6,11 @@ import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Aboutus from './pages/Aboutus';
 import Contactus from './pages/Contactus';
+import SolidWasteManagement from './subpages/SolidWasteManagement';
+import ConstructionDevelopment from './subpages/ConstructionDevelopment';
+import ElectricalService from './subpages/ElectricalService';
+import Housekeeping from './subpages/Housekeeping';
+import LogisticTransport from './subpages/LogisticTransport';
 
 function App() {
   return (
@@ -15,10 +20,17 @@ function App() {
         <Navbar />
         <div className="flex-grow">
           <Routes>
+            {/* Pages */}
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<Aboutus />} />
             <Route path="/contact" element={<Contactus />} />
 
+            {/* Sub-Pages */}
+            <Route path="/solid-waste-management" element={<SolidWasteManagement />} />
+            <Route path="/construction-development" element={<ConstructionDevelopment />} />
+            <Route path="/electrical-service" element={<ElectricalService />} />
+            <Route path="/housekeeping" element={<Housekeeping />} />
+            <Route path="/logistic-transport" element={<LogisticTransport />} />
           </Routes>
         </div>
         <Footer />
