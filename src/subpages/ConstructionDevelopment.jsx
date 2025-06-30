@@ -1,58 +1,63 @@
 import React, { useState } from 'react';
 import { Trash2, CheckCircle } from 'lucide-react';
+import { useEffect } from 'react';
 
 const ConstructionDevelopment = () => {
+
+  useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
   const [expandedCard, setExpandedCard] = useState(null);
 
   const handleCardClick = (index) => {
     setExpandedCard(expandedCard === index ? null : index);
-  };
+  };  
 
   const services = [
     {
       title: "Door to Door Collection & Transport",
       description: "Efficient household waste pickup and segregation.",
-      imageUrl: "https://via.placeholder.com/150",
+      imageUrl: "/tree.jpg",
     },
     {
       title: "Road Sweeping Manual & Mechanized",
       description: "Advanced street cleaning for up to 600km. We deploy high-efficiency sweepers with water-spray and vacuum systems.",
-      imageUrl: "https://via.placeholder.com/150",
+      imageUrl: "/tree.jpg",
     },
     {
       title: "Processing & Disposal Plant Operation",
       description: "Efficient operation of waste processing and disposal plants.",
-      imageUrl: "https://via.placeholder.com/150",
+      imageUrl: "/tree.jpg",
     },
     {
       title: "Bio Composting",
       description: "Conversion of organic waste into compost.",
-      imageUrl: "https://via.placeholder.com/150",
+      imageUrl: "/tree.jpg",
     },
     {
       title: "Fogging and Spraying",
       description: "Effective pest control and sanitation.",
-      imageUrl: "https://via.placeholder.com/150",
+      imageUrl: "/tree.jpg",
     },
     {
       title: "Drainage Cleaning",
       description: "Comprehensive drainage cleaning services.",
-      imageUrl: "https://via.placeholder.com/150",
+      imageUrl: "/tree.jpg",
     },
     {
       title: "Sanitary Landfill Development",
       description: "Development of sanitary landfills.",
-      imageUrl: "https://via.placeholder.com/150",
+      imageUrl: "/tree.jpg",
     },
     {
       title: "Legacy Waste Processing (Bio Mining)",
       description: "Processing of legacy waste through bio mining.",
-      imageUrl: "https://via.placeholder.com/150",
+      imageUrl: "/tree.jpg",
     },
     {
       title: "ETP & STP Plant Operation",
       description: "Operation of Effluent and Sewage Treatment Plants.",
-      imageUrl: "https://via.placeholder.com/150",
+      imageUrl: "/tree.jpg",
     }
   ];
 
@@ -61,19 +66,19 @@ const ConstructionDevelopment = () => {
       step: "1",
       title: "Assess & Plan",
       description: "Site surveys & customized waste management strategies.",
-      imageUrl: "https://via.placeholder.com/150",
+      imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
     },
     {
       step: "2",
       title: "Implement",
       description: "Deploy trained teams & modern equipment.",
-      imageUrl: "https://via.placeholder.com/150",
+      imageUrl: "https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
     },
     {
       step: "3",
       title: "Monitor & Maintain",
       description: "Continuous monitoring with data-driven improvements.",
-      imageUrl: "https://via.placeholder.com/150",
+      imageUrl: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
     }
   ];
 
@@ -83,7 +88,7 @@ const ConstructionDevelopment = () => {
       <div
         className="relative h-screen flex items-center justify-center text-white"
         style={{
-          background: 'linear-gradient(135deg, rgba(34, 197, 94, 0.9), rgba(21, 128, 61, 0.9)), url("your-image-url")',
+          background: 'linear-gradient(135deg, rgba(34, 197, 94, 0.5), rgba(21, 128, 61, 0.5)), url("/constructionbg.jpg")',
           backgroundSize: 'cover',
           backgroundPosition: 'center'
         }}

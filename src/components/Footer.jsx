@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Recycle, Leaf, Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin, ChevronRight } from 'lucide-react';
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const [email, setEmail] = useState('');
@@ -23,11 +24,10 @@ const Footer = () => {
         <div className="absolute top-40 right-20 w-20 h-20 rounded-full bg-green-300"></div>
         <div className="absolute bottom-20 left-1/3 w-16 h-16 rounded-full bg-emerald-300"></div>
       </div>
-      
+
       <div className="relative z-10 container mx-auto px-6 py-12">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
-          
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="flex items-center mb-4">
@@ -37,10 +37,10 @@ const Footer = () => {
               <h3 className="text-2xl font-bold">Ratnaprabha Facility Services</h3>
             </div>
             <p className="text-green-100 mb-6 leading-relaxed">
-              Leading the way in sustainable waste management solutions. We transform waste into resources, 
+              Leading the way in sustainable waste management solutions. We transform waste into resources,
               creating cleaner communities and a healthier planet for future generations.
             </p>
-            
+
             {/* Contact Info */}
             <div className="space-y-3">
               <div className="flex items-center text-green-100">
@@ -59,23 +59,27 @@ const Footer = () => {
           </div>
 
           {/* Services */}
-          <div>
+          <div id="services">
             <h4 className="text-xl font-semibold mb-6 flex items-center">
               <Leaf className="w-5 h-5 mr-2 text-green-300" />
               Our Services
             </h4>
             <ul className="space-y-3">
               {[
-                'Waste Collection',
-                'Recycling Solutions',
-                'Organic Waste Processing',
-                'Industrial Waste Management',
-                'E-Waste Disposal',
-                'Hazardous Waste Treatment'
+                { name: 'Solid Waste Management', path: '/solid-waste-management' },
+                { name: 'Construction And Development', path: '/construction-development' },
+                { name: 'Electrical Service', path: '/electrical-service' },
+                { name: 'House Keeping', path: '/housekeeping' },
+                { name: 'Logistic Transport', path: '/logistic-transport' }
               ].map((service, index) => (
-                <li key={index} className="flex items-center text-green-100 hover:text-white transition-colors group cursor-pointer">
-                  <ChevronRight className="w-4 h-4 mr-2 text-green-300 group-hover:translate-x-1 transition-transform" />
-                  {service}
+                <li key={index}>
+                  <Link
+                    to={service.path}
+                    className="flex items-center text-green-100 hover:text-white transition-colors group cursor-pointer"
+                  >
+                    <ChevronRight className="w-4 h-4 mr-2 text-green-300 group-hover:translate-x-1 transition-transform" />
+                    {service.name}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -84,9 +88,9 @@ const Footer = () => {
           {/* Newsletter & Social */}
           <div>
             <h4 className="text-xl font-semibold mb-6">Stay Connected</h4>
-            
+
             {/* Newsletter */}
-            <div className="mb-6">
+            {/* <div className="mb-6">
               <div className="relative">
                 <input
                   type="email"
@@ -107,7 +111,7 @@ const Footer = () => {
                   ✓ Thank you for subscribing!
                 </p>
               )}
-            </div>
+            </div> */}
 
             {/* Social Media */}
             <div className="flex space-x-4">
@@ -136,7 +140,7 @@ const Footer = () => {
             <div className="text-green-200 mb-4 md:mb-0">
               <p>© {currentYear} Ratnaprabha Facility Services LLP. All rights reserved.</p>
             </div>
-            <div className="flex space-x-6 text-sm">
+            {/* <div className="flex space-x-6 text-sm">
               <a href="/" className="text-green-200 hover:text-white transition-colors">
                 Privacy Policy
               </a>
@@ -146,9 +150,9 @@ const Footer = () => {
               <a href="/" className="text-green-200 hover:text-white transition-colors">
                 Sustainability Report
               </a>
-            </div>
+            </div> */}
           </div>
-          
+
           {/* Environmental Message */}
           <div className="mt-6 text-center">
             <div className="inline-flex items-center bg-green-800/50 px-4 py-2 rounded-full text-green-100">
