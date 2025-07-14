@@ -37,22 +37,23 @@ const AboutUs = () => {
 };
 
 
-  const certifications = [
-    { src: "/iso-9001.jpg", alt: "ISO 9001", caption: "ISO 9001:2015 Certified" },
-    { src: "/iso-9001.jpg", alt: "ISO 27001", caption: "ISO 27001 Certified" },
-    { src: "/iso-9001.jpg", alt: "ISO 45001", caption: "ISO 45001 Certified" },
-    { src: "/iso-9001.jpg", alt: "MSME", caption: "MSME Certified" },
-    { src: "/iso-9001.jpg", alt: "GST", caption: "GST Registered" },
-    { src: "/iso-9001.jpg", alt: "Quality Assurance", caption: "Quality Assurance Certified" },
+   const certifications = [
+    { src: "/1.png", alt: "ISO 9001", caption: "ISO 9001:2015 Certified" },
+    { src: "/2.jpg", alt: "ISO 27001", caption: "ISO 27001 Certified" },
+    { src: "/3.webp", alt: "ISO 45001", caption: "ISO 45001 Certified" },
+    { src: "/4.jpg", alt: "COI", caption: "Certificate of Incorporation" },
+    { src: "/5.jpg", alt: "GST", caption: "GST Registered" },
+    { src: "/6.png", alt: "EPFO", caption: "Employee Provident Fund Organization" },
+    { src: "/7.png", alt: "MSME", caption: "Micro, Small and Medium Enterprise" },
+    { src: "/8.jpg", alt: "Quality Assurance", caption: "Quality Assurance Advisory" },
+    { src: "/9.jpg", alt: "ISO 14001", caption: "ISO 14001 Certified" },
   ];
 
   const clients = [
-    { src: "/client.jpg", alt: "Client 1", caption: "Client 1" },
-    { src: "/client.jpg", alt: "Client 2", caption: "Client 2" },
-    { src: "/client.jpg", alt: "Client 3", caption: "Client 3" },
-    { src: "/client.jpg", alt: "Client 4", caption: "Client 4" },
-    { src: "/client.jpg", alt: "Client 5", caption: "Client 5" },
-    { src: "/client.jpg", alt: "Client 6", caption: "Client 6" },
+    { src: "/client1.jpg", alt: "Client 1", caption: "Client 1" },
+    { src: "/client2.jpg", alt: "Client 2", caption: "Client 2" },
+    { src: "/client3.jpg", alt: "Client 3", caption: "Client 3" },
+    { src: "/client4.jpg", alt: "Client 4", caption: "Client 4" },
   ];
 
   const coreValues = [
@@ -60,7 +61,7 @@ const AboutUs = () => {
       icon: '🌱',
       title: 'Sustainability',
       description: 'We prioritize eco-friendly practices in every service we provide.',
-      details: 'Our commitment to sustainability drives us to implement green solutions across all operations, reducing environmental impact and promoting a healthier planet.'
+      details: 'Our commitment to sustainability drives us to implement sky solutions across all operations, reducing environmental impact and promoting a healthier planet.'
     },
     {
       icon: '🏡',
@@ -77,9 +78,9 @@ const AboutUs = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-green-50 to-white mt-20">
+    <div className="min-h-screen bg-gradient-to-b from-sky-50 to-white mt-20">
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-green-600 to-emerald-700 text-white py-16">
+      <div className="bg-gradient-to-r from-sky-600 to-emerald-700 text-white py-16">
         <div className="max-w-6xl mx-auto px-6 text-center">
           <motion.h1
             initial={{ opacity: 0, y: -20 }}
@@ -108,7 +109,7 @@ const AboutUs = () => {
           transition={{ duration: 0.5 }}
           className="mb-12"
         >
-          <h2 className="text-4xl font-bold text-green-700 mb-4">Our Story</h2>
+          <h2 className="text-4xl font-bold text-sky-700 mb-4">Our Story</h2>
           <p className="text-base text-gray-700 leading-relaxed">
             Ratnaprabha Facility Services LLP is one of the fastest-growing Integrated Facility & Services Management companies. With our vast experience and expertise in managing clients' properties, we ensure your assets remain well-maintained and vibrant. We distinguish ourselves from the crowd through qualitative, customized solutions that are also cost-effective.
           </p>
@@ -120,10 +121,10 @@ const AboutUs = () => {
             <motion.div
               key={index}
               whileHover={{ scale: 1.05 }}
-              className="bg-green-50 p-6 rounded-lg text-center cursor-pointer"
+              className="bg-sky-50 p-6 rounded-lg text-center cursor-pointer"
               onClick={() => toggleContent(index)}
             >
-              <div className="text-green-600 mb-4 text-4xl">{value.icon}</div>
+              <div className="text-sky-600 mb-4 text-4xl">{value.icon}</div>
               <h4 className="text-xl font-bold mb-2">{value.title}</h4>
               <p className="text-gray-700">{value.description}</p>
               {activeIndex === index && (
@@ -141,7 +142,7 @@ const AboutUs = () => {
 
         {/* Our Owners Section */}
         <div className="text-center mb-12">
-          <h3 className="text-2xl font-bold text-green-700 mb-8">Our Owners</h3>
+          <h3 className="text-2xl font-bold text-sky-700 mb-8">Our Owners</h3>
           <div className="flex flex-col md:flex-row justify-center space-y-6 md:space-y-0 md:space-x-8">
             <motion.div
               whileHover={{ scale: 1.05 }}
@@ -150,7 +151,7 @@ const AboutUs = () => {
               <img
                 src="/kunal.png"
                 alt="Kunal Shinde"
-                className="w-32 h-36 mx-auto rounded-lg mb-4 object-cover"
+                className="w-32 h-40 mx-auto rounded-lg mb-4 object-cover"
               />
               <h4 className="text-xl font-bold">Kunal Shinde</h4>
               <p className="text-gray-600">
@@ -165,7 +166,7 @@ const AboutUs = () => {
               <img
                 src="/vidya.png"
                 alt="Vidya Shinde"
-                className="w-32 h-36 mx-auto rounded-lg mb-4 object-cover"
+                className="w-32 h-40 mx-auto rounded-lg mb-4 object-cover"
               />
               <h4 className="text-xl font-bold">Vidya Shinde</h4>
               <p className="text-gray-600">
@@ -177,29 +178,55 @@ const AboutUs = () => {
 
         {/* Our Certifications Section */}
         <div className="mb-12">
-          <h3 className="text-2xl font-bold text-green-700 mb-8 text-center">Our Certifications</h3>
-          <Slider {...settings}>
-            {certifications.map((certification, index) => (
-              <div key={index} className="flex flex-col items-center px-4">
-                <img src={certification.src} alt={certification.alt} className="w-40 h-40 mb-4 object-contain" />
-                <p className="text-gray-700 text-center">{certification.caption}</p>
-              </div>
-            ))}
-          </Slider>
+  <h3 className="text-2xl font-bold text-sky-700 mb-8 text-center">
+    Our Certifications
+  </h3>
+  <Slider {...settings}>
+    {certifications.map((certification, index) => (
+      <div
+        key={index}
+        className="flex flex-col items-center justify-center px-4 h-full"
+      >
+        <div className="flex items-center justify-center w-full h-44 mb-4">
+          <img
+            src={certification.src}
+            alt={certification.alt}
+            className="max-w-full max-h-full object-contain"
+          />
         </div>
+        <p className="text-gray-700 text-center text-sm md:text-base px-2">
+          {certification.caption}
+        </p>
+      </div>
+    ))}
+  </Slider>
+</div>
 
         {/* Our Prestige Clients Section */}
-        <div className="text-center mb-12">
-          <h3 className="text-2xl font-bold text-green-700 mb-8">Our Prestige Clients</h3>
-          <Slider {...settings}>
-            {clients.map((client, index) => (
-              <div key={index} className="bg-white p-4 rounded-lg shadow-md mx-2">
-                <img src={client.src} alt={client.alt} className="w-32 h-32 mx-auto mb-4 object-contain" />
-                <p className="text-gray-700">{client.caption}</p>
-              </div>
-            ))}
-          </Slider>
+       <div className="mb-12">
+  <h3 className="text-2xl font-bold text-sky-700 mb-8 text-center">
+    Our Clients
+  </h3>
+  <Slider {...settings}>
+    {clients.map((client, index) => (
+      <div
+        key={index}
+        className="flex flex-col items-center justify-center px-4 h-full"
+      >
+        <div className="flex items-center justify-center w-full h-44 mb-4">
+          <img
+            src={client.src}
+            alt={client.alt}
+            className="max-w-full max-h-full object-contain"
+          />
         </div>
+        <p className="text-gray-700 text-center text-sm md:text-base px-2">
+          {client.caption}
+        </p>
+      </div>
+    ))}
+  </Slider>
+</div>
       </div>
     </div>
   );

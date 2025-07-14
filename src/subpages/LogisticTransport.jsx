@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Trash2, CheckCircle } from 'lucide-react';
 import { useEffect } from 'react';
+import { ChevronDown } from "lucide-react";
+
 
 const LogisticTransport = () => {
 
@@ -84,12 +86,12 @@ const LogisticTransport = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-50 to-white">
+    <div className="min-h-screen bg-gradient-to-br from-sky-50 to-white">
       {/* Hero Section */}
       <div
-        className="relative h-screen flex items-center justify-center text-white"
+        className="relative h-[50vh] flex items-center justify-center text-white mt-20"
         style={{
-          background: 'linear-gradient(135deg, rgba(34, 197, 94, 0.5), rgba(21, 128, 61, 0.5)), url("/transportbg.jpg")',
+          background: 'linear-gradient(135deg, rgba(12, 74, 110, 0.6), rgba(12, 74, 110, 0.6)), url("/transportbg.jpg")',
           backgroundSize: 'cover',
           backgroundPosition: 'center'
         }}
@@ -102,10 +104,10 @@ const LogisticTransport = () => {
             </div>
           </div>
           <h1 className="text-5xl font-bold mb-4">Logistic Transport</h1>
-          <p className="text-xl text-green-100 max-w-2xl mx-auto">
-            Providing sustainable waste management solutions for a cleaner and greener environment
+          <p className="text-xl text-sky-100 max-w-2xl mx-auto">
+            Providing sustainable waste management solutions for a cleaner and skyer environment
           </p>
-          <button className="mt-8 bg-white text-green-700 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors duration-300">
+          <button className="mt-8 bg-white text-sky-700 px-8 py-3 rounded-lg font-semibold hover:bg-sky-50 transition-colors duration-300">
             Get Free Consultation
           </button>
         </div>
@@ -113,30 +115,51 @@ const LogisticTransport = () => {
 
       {/* Key Services Section */}
       <div className="max-w-6xl mx-auto px-4 py-12">
-        <h2 className="text-3xl font-bold text-center mb-12">Our Key Services</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <div
-              key={index}
-              className={`bg-white p-6 rounded-lg shadow-md cursor-pointer transform transition-all duration-300 ${expandedCard === index ? 'scale-105' : 'hover:scale-105'}`}
-              onClick={() => handleCardClick(index)}
-            >
-              <img src={service.imageUrl} alt={service.title} className="w-full h-40 object-cover rounded-t-lg mb-4" />
-              <h3 className="text-xl font-semibold mb-2 flex items-center">
-                <CheckCircle className="mr-2 text-green-500" /> {service.title}
-              </h3>
-              <p className="text-gray-600">
-                {service.description}
-              </p>
-              {expandedCard === index && (
-                <div className="mt-4">
-                  <p className="text-gray-700">Additional detailed information about {service.title}.</p>
-                </div>
-              )}
+  <h2 className="text-3xl font-bold text-center mb-12 text-sky-700">
+    Our Key Services
+  </h2>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+    {services.map((service, index) => (
+      <div
+        key={index}
+        className={`bg-white border border-gray-100 rounded-xl shadow-md transition-all duration-300 cursor-pointer hover:shadow-lg ${
+          expandedCard === index ? 'scale-105 shadow-xl' : 'hover:scale-105'
+        }`}
+        onClick={() => handleCardClick(index)}
+      >
+        <img
+          src={service.imageUrl}
+          alt={service.title}
+          className="w-full h-48 object-cover rounded-t-xl"
+        />
+
+        <div className="p-6">
+          <div className="flex justify-between items-center mb-2">
+            <h3 className="text-lg font-semibold text-gray-800 flex items-center">
+              <CheckCircle className="w-5 h-5 text-sky-500 mr-2" />
+              {service.title}
+            </h3>
+
+            <ChevronDown
+              className={`w-5 h-5 text-gray-500 transition-transform duration-300 ${
+                expandedCard === index ? 'rotate-180' : ''
+              }`}
+            />
+          </div>
+
+          <p className="text-gray-600 text-sm">{service.description}</p>
+
+          {expandedCard === index && (
+            <div className="mt-4 text-gray-700 text-sm">
+              <p>Additional detailed information about {service.title}.</p>
             </div>
-          ))}
+          )}
         </div>
       </div>
+    ))}
+  </div>
+</div>
 
       {/* Our Process Section */}
       <div className="max-w-6xl mx-auto px-4 py-12 bg-gray-100">
@@ -149,7 +172,7 @@ const LogisticTransport = () => {
               onClick={() => handleCardClick(index + services.length)}
             >
               <img src={step.imageUrl} alt={step.title} className="w-full h-40 object-cover rounded-t-lg mb-4" />
-              <div className="text-4xl font-bold text-blue-500 mb-4">{step.step}</div>
+              <div className="text-4xl font-bold text-sky-500 mb-4">{step.step}</div>
               <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
               <p className="text-gray-600">
                 {step.description}
@@ -163,7 +186,7 @@ const LogisticTransport = () => {
           ))}
         </div>
         <div className="mt-12 text-center">
-          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+          <button className="bg-sky-500 hover:bg-sky-700 text-white font-bold py-2 px-4 rounded">
             How can we assist you?
           </button>
         </div>
